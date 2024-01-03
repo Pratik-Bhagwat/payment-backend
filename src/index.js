@@ -25,7 +25,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:5173/success",
+      success_url: "https://walk-in-style-store.vercel.app/success",
       cancel_url: "https://walk-in-style-store.vercel.app/cancel",
     });
 
